@@ -11,12 +11,19 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
+            /* Añadido para el sticky footer */
+            display: flex;
+            flex-direction: column;
         }
         header {
             padding: 1rem 0;
             background: #0C647B;
             color: #fff;
             text-align: center;
+        }
+        /* Añadido para que main ocupe el espacio disponible */
+        main {
+            flex-grow: 1;
         }
         .app-list {
             display: flex;
@@ -69,15 +76,9 @@
         footer p {
             margin: 0;
         }
+        /* Corregido: El media query estaba mal anidado y se ha limpiado */
         @media (max-width: 600px) {
-            .app-list {
-            body {
-                display: flex; /* Necesario para que el footer se pegue abajo */
-                flex-direction: column; /* Alinea el contenido verticalmente */
-            }
-            main {
-                flex-grow: 1; /* Hace que el contenido principal crezca */
-            }
+            /* Aquí se pueden añadir estilos específicos para móvil */
         }
     </style>
     <link rel="icon" type="image/png" sizes="192x192" href="https://ogvapps.github.io/salud-escolar/icon-192.png">
