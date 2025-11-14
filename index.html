@@ -57,14 +57,26 @@
             margin: 0;
             color: #333;
         }
+        /* Estilos para el footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background-color: #0C647B;
+            color: #E0F2FE;
+            font-size: 0.9rem;
+            margin-top: auto; /* Empuja el footer al fondo */
+        }
+        footer p {
+            margin: 0;
+        }
         @media (max-width: 600px) {
             .app-list {
-                padding: 1rem 0.5rem;
-                gap: 1rem;
+            body {
+                display: flex; /* Necesario para que el footer se pegue abajo */
+                flex-direction: column; /* Alinea el contenido verticalmente */
             }
-            .app-item {
-                flex: 1 1 100%;
-                max-width: 100%;
+            main {
+                flex-grow: 1; /* Hace que el contenido principal crezca */
             }
         }
     </style>
@@ -108,5 +120,13 @@
             <!-- Puedes añadir más apps aquí replicando el bloque "app-item" -->
         </section>
     </main>
+
+    <!-- Inicio del Footer -->
+    <footer>
+        <p>&copy; 2025 Portal de Salud Escolar. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem;">Creado por ogvapps | ogonzalezv01@educarex.es</p>
+    </footer>
+    <!-- Fin del Footer -->
+
 </body>
 </html>
