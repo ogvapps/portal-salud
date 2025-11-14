@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portal de Salud Escolar</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f8fafd;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    header {
-      padding: 1rem 0;
-      background: #0C647B;
-      color: #fff;
-      text-align: center;
-    }
-    .app-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-    .app-item {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-      flex: 1 1 240px;
-      max-width: 280px;
-      min-width: 140px;
-      text-align: center;
-      padding: 1.5rem .5rem;
-      transition: transform .15s;
-    }
-    .app-item:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 20px rgba(12,100,123,.12);
-    }
-    .app-item img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 1rem;
-      border-radius: 16px;
-      background: #f0f4f8;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    }
-    .app-item a {
-      display: block;
-      color: #0C647B;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-top: .5rem;
-      text-decoration: none;
-      transition: color .2s;
-    }
-    .app-item a:hover {
-      color: #E53935;
-    }
-    @media (max-width: 700px) {
-      .app-list {
-        gap: 1rem;
-      }
-      .app-item {
-        max-width: 100%;
-        min-width: 120px;
-        padding: 1rem .2rem;
-      }
-      .app-item img {
-        width: 65px;
-        height: 65px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal de Salud Escolar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8fafd;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        header {
+            padding: 1rem 0;
+            background: #0C647B;
+            color: #fff;
+            text-align: center;
+        }
+        .app-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .app-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            flex: 1 1 240px;
+            max-width: 280px;
+            min-width: 240px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+        }
+        .app-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        .app-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 1.5rem 1rem;
+        }
+        .app-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+        .app-item h2 {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .app-list {
+                padding: 1rem 0.5rem;
+                gap: 1rem;
+            }
+            .app-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/png" sizes="192x192" href="https://ogvapps.github.io/salud-escolar/icon-192.png">
+    <link rel="apple-touch-icon" href="https://ogvapps.github.io/salud-escolar/icon-192.png">
+    <meta name="theme-color" content="#0C647B">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <header>
-    <h1>Portal de Salud Escolar</h1>
-    <p>Accede a las aplicaciones principales de salud escolar</p>
-  </header>
+    <header>
+        <h1>🏥 Portal de Salud Escolar</h1>
+    </header>
 
-  <main>
-    <section class="app-list">
-      <div class="app-item">
-        <img src="https://ogvapps.github.io/salud-escolar/icon-192.png" alt="Ficha de Salud" />
-        <a href="https://ogvapps.github.io/ficha-salud/" target="_blank">Ficha de Salud</a>
-      </div>
-      <div class="app-item">
-        <img src="https://ogvapps.github.io/partes-de-accidentes-colegio/icon-192.png" alt="Partes de Accidentes" />
-        <a href="https://ogvapps.github.io/partes-de-accidentes-colegio/" target="_blank">Partes de Accidentes</a>
-      </div>
-      <div class="app-item">
-        <img src="https://ogvapps.github.io/salud-escolar/icon-192.png" alt="Salud Escolar App" />
-        <a href="https://ogvapps.github.io/salud-escolar/" target="_blank">Salud Escolar Principal</a>
-      </div>
-      <!-- Puedes añadir más apps aquí repitiendo el bloque "app-item" -->
-    </section>
-  </main>
+    <main>
+        <section class="app-list">
+            <div class="app-item">
+                <a href="https://ogvapps.github.io/ficha-salud/" target="_blank">
+                    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Hoja de papel con esquina doblada -->
+                        <path d="M15 5 L55 5 L65 15 L65 75 L15 75 Z" fill="#ffffff" stroke="#333" stroke-width="2"/>
+                        <path d="M55 5 L55 15 L65 15" fill="#e0e0e0" stroke="#333" stroke-width="2"/>
+                        <!-- Cruz roja -->
+                        <rect x="35" y="25" width="10" height="30" fill="#dc3545" rx="1"/>
+                        <rect x="25" y="35" width="30" height="10" fill="#dc3545" rx="1"/>
+                    </svg>
+                    <h2>Ficha de Salud</h2>
+                </a>
+            </div>
+            <div class="app-item">
+                <a href="https://ogvapps.github.io/partes-de-accidentes-colegio/" target="_blank">
+                    <img src="https://ogvapps.github.io/partes-de-accidentes-colegio/icon-192.png" alt="Partes de Accidentes" />
+                    <h2>Partes de Accidentes</h2>
+                </a>
+            </div>
+            <div class="app-item">
+                <a href="https://ogvapps.github.io/salud-escolar/" target="_blank">
+                    <img src="https://ogvapps.github.io/salud-escolar/icon-192.png" alt="Salud Escolar App" />
+                    <h2>Salud Escolar Principal</h2>
+                </a>
+            </div>
+            <!-- Puedes añadir más apps aquí replicando el bloque "app-item" -->
+        </section>
+    </main>
 </body>
 </html>
